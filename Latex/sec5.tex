@@ -26,6 +26,8 @@ and Singapore \citep{Song2014PRESS}. All data sets consist of a large number of 
 We divide each data set into two parts: one part for training and the other part for testing. Training sets act as historical logs while test sets act as future queries. The frequency statistics are extracted from the training set, and the cache is filled based on benefit values.
 For Aalborg, there are 2673 and 2573 queries in training and test sets, respectively; for Beijing, there are 7177 and 6664 queries in training and test sets, respectively; for Singapore, we draw 20,000 queries from a long-tail distribution, which is close to the practical situation. Out of the 20,000 queries, 70\% queries are seen as the training set and remnant 30\% queries as the test set.
 
+%For Aalborg, there are 2373 and 2373 queries in training and test sets, respectively; for Beijing, there are 6464 and 6464 queries in training and test sets, respectively; for Singapore, we draw 15,000 trajectories from a taxi trajectory data of Singapore randomly, and then we we extract each trajectory's start point and end point, and get the nodes number corresponding to the nodes on the road network, the start node and end node will be the source and target of a shortest path request.We get 15000 queries to be the query log at last, half queries are seen as the training set and remnant 50\% queries as the test set.
+%
 To simulate the weight change of an edge, we generate 50 instances based on each data set. In each instance, one edge is randomly selected and its weight is changed. Out of the 50 instances, 20 instances increase weights of edges and 30 instances decrease weights of edges.
 The increase and decrease of weights range from 1\% to 100\%.
 
