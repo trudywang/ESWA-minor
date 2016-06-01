@@ -1,0 +1,85 @@
+\documentclass[review]{elsarticle}
+
+\usepackage{lineno,hyperref}
+\modulolinenumbers[5]
+
+\journal{Expert Systems with Applications}
+
+\usepackage[figuresright]{rotating}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{times,amsmath,epsfig}
+\usepackage{amssymb}
+\usepackage{slashbox}
+\usepackage{multirow}
+\let\algorithm\relax
+\let\endalgorithm\relax
+\usepackage[linesnumbered,ruled,boxed,vlined]{algorithm2e}
+
+\usepackage{color}
+
+\newtheorem{definition}{Definition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{proof}{Proof}
+
+\newcommand{\modify}[1]{\textcolor{blue}{#1}}
+\newcommand{\fixme}[1]{\footnote{\textcolor{red}{\textbf{FIXME!!!} #1}}}
+%\let\modify\     %% remove the left %, if we want to change red to black
+
+
+\begin{document}
+
+\begin{frontmatter}
+
+\title{Refreshment of the Shortest Path Cache with Change of Single Edge}
+
+\author[address1]{Xiaohua Li}
+\ead{lixiaohua@ise.neu.edu.cn}
+\author[address1]{Tao Qiu}
+\ead{qiutaoneu@gmail.com}
+\author[address2]{Ning Wang\corref{mycorrespondingauthor}}
+\ead{ningwang@shu.edu.cn}
+\author[address1]{Xiaochun Yang}
+\ead{yangxiaochun@ise.neu.edu.cn}
+\author[address1]{Bin Wang}
+\ead{wangbin@ise.neu.edu.cn}
+\author[address1]{Ge Yu}
+\ead{yuge@ise.neu.edu.cn}
+\cortext[mycorrespondingauthor]{Corresponding author.}
+\address[address1]{School of Computer Science and Engineering, Northeastern University, Liaoning, China}
+
+\address[address2]{Department of Information Management, School of Management, Shanghai University, Shanghai, China}
+
+%% \address[mymainaddress]{College of Information Science and Engineering,\\
+%% Northeastern University, Liaoning 110819, China\\}
+%% \address[mysecondaryaddress]{360 Park Avenue South, New York}
+
+\bibliographystyle{model5-names}\biboptions{authoryear}
+
+
+\begin{abstract}
+The problem of caching shortest paths has been widely studied.
+All existing methods that address this problem assume that the condition of road network does not change with time.
+In this paper, we study how to refresh a cache when one edge of the underlying graph changes. A bitmap-based cache structure is proposed to store and give access to shortest paths. In the following, algorithms are developed to detect shortest paths that are affected by change of edge. After detecting the affected paths, several heuristic-based refreshment strategies are proposed to update the cache. We have conducted a series of experiments to compare the performance of proposed methods on refreshing caches. It shows that replacing affected paths with the largest benefit should be used in the shortest path caching applications such as navigation and map services.
+\end{abstract}
+
+\begin{keyword}
+\texttt{shortest path caching, cache refreshment strategy, change of road network, affected shortest paths}
+\end{keyword}
+
+\end{frontmatter}
+
+\linenumbers
+
+\input{sec1}
+%\input{sec2}
+\input{sec3}
+\input{sec4}
+\input{sec5}
+\input{sec6}
+
+\section*{References}
+\bibliography{refresh_cache}
+\end{document}
+

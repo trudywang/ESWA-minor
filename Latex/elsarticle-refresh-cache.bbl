@@ -1,0 +1,302 @@
+\begin{thebibliography}{34}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\href}[2]{#2}
+\providecommand{\path}[1]{#1}
+\providecommand{\DOIprefix}{doi:}
+\providecommand{\ArXivprefix}{arXiv:}
+\providecommand{\URLprefix}{URL: }
+\providecommand{\Pubmedprefix}{pmid:}
+\providecommand{\doi}[1]{\href{http://dx.doi.org/#1}{\path{#1}}}
+\providecommand{\Pubmed}[1]{\href{pmid:#1}{\path{#1}}}
+\providecommand{\bibinfo}[2]{#2}
+\ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
+%Type = Incollection
+\bibitem[{Altingovde et~al.(2009)Altingovde, Ozcan \&
+  Ulusoy}]{altingovde2009cost}
+\bibinfo{author}{Altingovde, I.~S.}, \bibinfo{author}{Ozcan, R.}, \&
+  \bibinfo{author}{Ulusoy, {\"O}.} (\bibinfo{year}{2009}).
+\newblock \bibinfo{title}{A cost-aware strategy for query result caching in web
+  search engines}.
+\newblock In {\it \bibinfo{booktitle}{Advances in Information Retrieval}\/}
+  (pp. \bibinfo{pages}{628--636}).
+%Type = Inproceedings
+\bibitem[{Baeza-Yates et~al.(2007)Baeza-Yates, Gionis, Junqueira, Murdock,
+  Plachouras \& Silvestri}]{baeza2007impact}
+\bibinfo{author}{Baeza-Yates, R.}, \bibinfo{author}{Gionis, A.},
+  \bibinfo{author}{Junqueira, F.}, \bibinfo{author}{Murdock, V.},
+  \bibinfo{author}{Plachouras, V.}, \& \bibinfo{author}{Silvestri, F.}
+  (\bibinfo{year}{2007}).
+\newblock \bibinfo{title}{The impact of caching on search engines}.
+\newblock In {\it \bibinfo{booktitle}{Proceedings of the 30th Annual
+  International Conference on Research on Development in Information
+  Retrieval}\/} (pp. \bibinfo{pages}{183--190}).
+%Type = Inproceedings
+\bibitem[{Baeza-Yates \& Saint-Jean(2003)}]{baeza2003three}
+\bibinfo{author}{Baeza-Yates, R.}, \& \bibinfo{author}{Saint-Jean, F.}
+  (\bibinfo{year}{2003}).
+\newblock \bibinfo{title}{A three level search engine index based in query log
+  distribution}.
+\newblock In {\it \bibinfo{booktitle}{String Processing and Information
+  Retrieval}\/} (pp. \bibinfo{pages}{56--65}).
+%Type = Incollection
+\bibitem[{Bauer \& Wagner(2009)}]{bauer2009batch}
+\bibinfo{author}{Bauer, R.}, \& \bibinfo{author}{Wagner, D.}
+  (\bibinfo{year}{2009}).
+\newblock \bibinfo{title}{Batch dynamic single-source shortest-path algorithms:
+  An experimental study}.
+\newblock In {\it \bibinfo{booktitle}{Experimental Algorithms}\/} (pp.
+  \bibinfo{pages}{51--62}).
+%Type = Article
+\bibitem[{Berrettini et~al.(2009)Berrettini, D'Angelo \&
+  Delling}]{berrettini2009arc}
+\bibinfo{author}{Berrettini, E.}, \bibinfo{author}{D'Angelo, G.}, \&
+  \bibinfo{author}{Delling, D.} (\bibinfo{year}{2009}).
+\newblock \bibinfo{title}{Arc-flags in dynamic graphs}.
+\newblock {\it \bibinfo{journal}{OASIcs-OpenAccess Series in Informatics}\/},
+  {\it \bibinfo{volume}{12}\/}.
+%Type = Inproceedings
+\bibitem[{Cheng et~al.(2012)Cheng, Ke, Chu \& Cheng}]{cheng2012efficient}
+\bibinfo{author}{Cheng, J.}, \bibinfo{author}{Ke, Y.}, \bibinfo{author}{Chu,
+  S.}, \& \bibinfo{author}{Cheng, C.} (\bibinfo{year}{2012}).
+\newblock \bibinfo{title}{Efficient processing of distance queries in large
+  graphs: A vertex cover approach}.
+\newblock In {\it \bibinfo{booktitle}{Proceedings of the 2012 ACM Conference on
+  Management of Data}\/} (pp. \bibinfo{pages}{457--468}).
+%Type = Book
+\bibitem[{Cormen et~al.(2009)Cormen, Leiserson, Rivest, Stein
+  et~al.}]{cormen2001introduction}
+\bibinfo{author}{Cormen, T.~H.}, \bibinfo{author}{Leiserson, C.~E.},
+  \bibinfo{author}{Rivest, R.~L.}, \bibinfo{author}{Stein, C.} et~al.
+  (\bibinfo{year}{2009}).
+\newblock {\it \bibinfo{title}{Introduction to algorithms}\/}.
+\newblock (\bibinfo{edition}{3rd} ed.).
+\newblock \bibinfo{publisher}{MIT press Cambridge}.
+%Type = Incollection
+\bibitem[{D'Andrea et~al.(2013)D'Andrea, D'Emidio, Frigioni, Leucci \&
+  Proietti}]{d2013dynamically}
+\bibinfo{author}{D'Andrea, A.}, \bibinfo{author}{D'Emidio, M.},
+  \bibinfo{author}{Frigioni, D.}, \bibinfo{author}{Leucci, S.}, \&
+  \bibinfo{author}{Proietti, G.} (\bibinfo{year}{2013}).
+\newblock \bibinfo{title}{Dynamically maintaining shortest path trees under
+  batches of updates}.
+\newblock In {\it \bibinfo{booktitle}{Structural Information and Communication
+  Complexity}\/} (pp. \bibinfo{pages}{286--297}).
+%Type = Article
+\bibitem[{D'Angelo et~al.(2014)D'Angelo, D'Emidio \& Frigioni}]{d2014fully}
+\bibinfo{author}{D'Angelo, G.}, \bibinfo{author}{D'Emidio, M.}, \&
+  \bibinfo{author}{Frigioni, D.} (\bibinfo{year}{2014}).
+\newblock \bibinfo{title}{Fully dynamic update of arc-flags}.
+\newblock {\it \bibinfo{journal}{Networks}\/},  {\it \bibinfo{volume}{63
+  \textup{(3)}}\/}, \bibinfo{pages}{243--259}.
+%Type = Inproceedings
+\bibitem[{Ding et~al.(2008)Ding, Yu \& Qin}]{ding2008finding}
+\bibinfo{author}{Ding, B.}, \bibinfo{author}{Yu, J.~X.}, \&
+  \bibinfo{author}{Qin, L.} (\bibinfo{year}{2008}).
+\newblock \bibinfo{title}{Finding time-dependent shortest paths over large
+  graphs}.
+\newblock In {\it \bibinfo{booktitle}{Proceedings of the 11th international
+  conference on Extending database technology: Advances in database
+  technology}\/} (pp. \bibinfo{pages}{205--216}).
+%Type = Article
+\bibitem[{Frigioni et~al.(1996)Frigioni, Marchetti-Spaccamela \&
+  Nanni}]{frigioni1996fully}
+\bibinfo{author}{Frigioni, D.}, \bibinfo{author}{Marchetti-Spaccamela, A.}, \&
+  \bibinfo{author}{Nanni, U.} (\bibinfo{year}{1996}).
+\newblock \bibinfo{title}{Fully dynamic output bounded single source shortest
+  path problem}.
+\newblock {\it \bibinfo{journal}{ACM-SIAM Symposium on Discrete Algorithms}\/},
+   {\it \bibinfo{volume}{96}\/}, \bibinfo{pages}{212--221}.
+%Type = Article
+\bibitem[{Fu \& Rilett(1998)}]{fu1998expected}
+\bibinfo{author}{Fu, L.}, \& \bibinfo{author}{Rilett, L.~R.}
+  (\bibinfo{year}{1998}).
+\newblock \bibinfo{title}{Expected shortest paths in dynamic and stochastic
+  traffic networks}.
+\newblock {\it \bibinfo{journal}{Transportation Research Part B:
+  Methodological}\/},  {\it \bibinfo{volume}{32 \textup{(7)}}\/},
+  \bibinfo{pages}{499--516}.
+%Type = Inproceedings
+\bibitem[{Gan \& Suel(2009)}]{gan2009improved}
+\bibinfo{author}{Gan, Q.}, \& \bibinfo{author}{Suel, T.}
+  (\bibinfo{year}{2009}).
+\newblock \bibinfo{title}{Improved techniques for result caching in web search
+  engines}.
+\newblock In {\it \bibinfo{booktitle}{Proceedings of the 18th International
+  Conference on World Wide Web}\/} (pp. \bibinfo{pages}{431--440}).
+%Type = Inproceedings
+\bibitem[{Kanoulas et~al.(2006)Kanoulas, Du, Xia \&
+  Zhang}]{kanoulas2006finding}
+\bibinfo{author}{Kanoulas, E.}, \bibinfo{author}{Du, Y.}, \bibinfo{author}{Xia,
+  T.}, \& \bibinfo{author}{Zhang, D.} (\bibinfo{year}{2006}).
+\newblock \bibinfo{title}{Finding fastest paths on a road network with speed
+  patterns}.
+\newblock In {\it \bibinfo{booktitle}{Proceedings of the 22nd IEEE
+  International Conference on Data Engineering}\/} (pp.
+  \bibinfo{pages}{10--10}).
+%Type = Incollection
+\bibitem[{Kriegel et~al.(2008)Kriegel, Kroger, Renz \&
+  Schmidt}]{Kriegel2008Hierarchical}
+\bibinfo{author}{Kriegel, H.-P.}, \bibinfo{author}{Kroger, P.},
+  \bibinfo{author}{Renz, M.}, \& \bibinfo{author}{Schmidt, T.}
+  (\bibinfo{year}{2008}).
+\newblock \bibinfo{title}{Hierarchical graph embedding for efficient query
+  processing in very large traffic networks}.
+\newblock In {\it \bibinfo{booktitle}{Scientific and Statistical Database
+  Management Conference}\/} (pp. \bibinfo{pages}{150--167}).
+%Type = Article
+\bibitem[{Lauther(2004)}]{lauther2004extremely}
+\bibinfo{author}{Lauther, U.} (\bibinfo{year}{2004}).
+\newblock \bibinfo{title}{An extremely fast, exact algorithm for finding
+  shortest paths in static networks with geographical background}.
+\newblock {\it \bibinfo{journal}{Geoinformation und Mobilit{\"a}t-von der
+  Forschung zur praktischen Anwendung}\/},  {\it \bibinfo{volume}{22}\/},
+  \bibinfo{pages}{219--230}.
+%Type = Incollection
+\bibitem[{Lee et~al.(2007)Lee, Wu \& Chen}]{lee2007}
+\bibinfo{author}{Lee, C.-C.}, \bibinfo{author}{Wu, Y.-H.}, \&
+  \bibinfo{author}{Chen, A.~L.} (\bibinfo{year}{2007}).
+\newblock \bibinfo{title}{Continuous evaluation of fastest path queries on road
+  networks}.
+\newblock In {\it \bibinfo{booktitle}{Advances in Spatial and Temporal
+  Databases}\/} (pp. \bibinfo{pages}{20--37}).
+%Type = Inproceedings
+\bibitem[{Li et~al.(2014)Li, Qiu, Yang, Wang \& Yu}]{Li2014refreshment}
+\bibinfo{author}{Li, X.}, \bibinfo{author}{Qiu, T.}, \bibinfo{author}{Yang,
+  X.}, \bibinfo{author}{Wang, B.}, \& \bibinfo{author}{Yu, G.}
+  (\bibinfo{year}{2014}).
+\newblock \bibinfo{title}{Refreshment strategies for shortest path caching
+  problem with changing edge weight}.
+\newblock In {\it \bibinfo{booktitle}{Asia Pacific Web Conference}\/} (pp.
+  \bibinfo{pages}{331--342}).
+%Type = Incollection
+\bibitem[{Li et~al.(2013)Li, Wang, Yang, Wang \& Yu}]{li2013}
+\bibinfo{author}{Li, X.}, \bibinfo{author}{Wang, S.}, \bibinfo{author}{Yang,
+  X.}, \bibinfo{author}{Wang, B.}, \& \bibinfo{author}{Yu, G.}
+  (\bibinfo{year}{2013}).
+\newblock \bibinfo{title}{An improved algorithm to enhance the utilization of
+  shortest path caches}.
+\newblock In {\it \bibinfo{booktitle}{Web Information System and
+  Application}\/} (pp. \bibinfo{pages}{419--424}).
+%Type = Incollection
+\bibitem[{Liu \& Yang(2011)}]{liu2011generalization}
+\bibinfo{author}{Liu, X.}, \& \bibinfo{author}{Yang, X.}
+  (\bibinfo{year}{2011}).
+\newblock \bibinfo{title}{A generalization based approach for anonymizing
+  weighted social network graphs}.
+\newblock In {\it \bibinfo{booktitle}{Web-Age Information Management}\/} (pp.
+  \bibinfo{pages}{118--130}).
+%Type = Inproceedings
+\bibitem[{Long \& Suel(2005)}]{Long2005Three-Level}
+\bibinfo{author}{Long, X.}, \& \bibinfo{author}{Suel, T.}
+  (\bibinfo{year}{2005}).
+\newblock \bibinfo{title}{Three-level caching for efficient query processing in
+  large web search engines}.
+\newblock In {\it \bibinfo{booktitle}{World Wide Web Conference}\/} (pp.
+  \bibinfo{pages}{257--266}).
+%Type = Article
+\bibitem[{Markatos(2001)}]{markatos2001caching}
+\bibinfo{author}{Markatos, E.~P.} (\bibinfo{year}{2001}).
+\newblock \bibinfo{title}{On caching search engine query results}.
+\newblock {\it \bibinfo{journal}{Computer Communications}\/},  {\it
+  \bibinfo{volume}{24 \textup{(2)}}\/}, \bibinfo{pages}{137--143}.
+%Type = Article
+\bibitem[{McQuillan et~al.(1980)McQuillan, Richer \& Rosen}]{mcquillan1980new}
+\bibinfo{author}{McQuillan, J.~M.}, \bibinfo{author}{Richer, I.}, \&
+  \bibinfo{author}{Rosen, E.~C.} (\bibinfo{year}{1980}).
+\newblock \bibinfo{title}{The new routing algorithm for the arpanet}.
+\newblock {\it \bibinfo{journal}{Communications, IEEE Transactions on}\/},
+  {\it \bibinfo{volume}{28 \textup{(5)}}\/}, \bibinfo{pages}{711--719}.
+%Type = Article
+\bibitem[{Narv{\'a}ez et~al.(2000)Narv{\'a}ez, Siu \& Tzeng}]{narvaez2000new}
+\bibinfo{author}{Narv{\'a}ez, P.}, \bibinfo{author}{Siu, K.-Y.}, \&
+  \bibinfo{author}{Tzeng, H.-Y.} (\bibinfo{year}{2000}).
+\newblock \bibinfo{title}{New dynamic algorithms for shortest path tree
+  computation}.
+\newblock {\it \bibinfo{journal}{IEEE/ACM Transactions on Networking}\/},  {\it
+  \bibinfo{volume}{8 \textup{(6)}}\/}, \bibinfo{pages}{734--746}.
+%Type = Article
+\bibitem[{O'Neil et~al.(1993)O'Neil, O'Neil \& Weikum}]{o1993lru}
+\bibinfo{author}{O'Neil, E.~J.}, \bibinfo{author}{O'Neil, P.~E.}, \&
+  \bibinfo{author}{Weikum, G.} (\bibinfo{year}{1993}).
+\newblock \bibinfo{title}{The {LRU-K} page replacement algorithm for database
+  disk buffering}.
+\newblock {\it \bibinfo{journal}{ACM SIGMOD Record}\/},  {\it
+  \bibinfo{volume}{22 \textup{(2)}}\/}, \bibinfo{pages}{297--306}.
+%Type = Inproceedings
+\bibitem[{O'Neil \& Quass(1997)}]{ONeil1997}
+\bibinfo{author}{O'Neil, P.}, \& \bibinfo{author}{Quass, D.}
+  (\bibinfo{year}{1997}).
+\newblock \bibinfo{title}{Improved query performance with variant indexes}.
+\newblock In {\it \bibinfo{booktitle}{Proceedings of the ACM Conference on
+  Management of Data}\/} (pp. \bibinfo{pages}{38--49}).
+%Type = Inproceedings
+\bibitem[{Potamias et~al.(2009)Potamias, Bonchi, Castillo \&
+  Gionis}]{potamias2009fast}
+\bibinfo{author}{Potamias, M.}, \bibinfo{author}{Bonchi, F.},
+  \bibinfo{author}{Castillo, C.}, \& \bibinfo{author}{Gionis, A.}
+  (\bibinfo{year}{2009}).
+\newblock \bibinfo{title}{Fast shortest path distance estimation in large
+  networks}.
+\newblock In {\it \bibinfo{booktitle}{Proceedings of the 18th ACM International
+  Conference on Information and Knowledge Management}\/} (pp.
+  \bibinfo{pages}{867--876}).
+%Type = Article
+\bibitem[{Song et~al.(2014)Song, Sun, Zheng \& Zheng}]{Song2014PRESS}
+\bibinfo{author}{Song, R.}, \bibinfo{author}{Sun, W.}, \bibinfo{author}{Zheng,
+  B.}, \& \bibinfo{author}{Zheng, Y.} (\bibinfo{year}{2014}).
+\newblock \bibinfo{title}{Press: A novel framework of trajectory compression in
+  road networks}.
+\newblock {\it \bibinfo{journal}{Eprint Arxiv}\/},  {\it \bibinfo{volume}{7
+  \textup{(9)}}\/}, \bibinfo{pages}{661--672}.
+%Type = Inproceedings
+\bibitem[{Thomsen et~al.(2012)Thomsen, Yiu \& Jensen}]{thomsen2012effective}
+\bibinfo{author}{Thomsen, J.~R.}, \bibinfo{author}{Yiu, M.~L.}, \&
+  \bibinfo{author}{Jensen, C.~S.} (\bibinfo{year}{2012}).
+\newblock \bibinfo{title}{Effective caching of shortest paths for
+  location-based services}.
+\newblock In {\it \bibinfo{booktitle}{Proceedings of the 2012 ACM Conference on
+  Management of Data}\/} (pp. \bibinfo{pages}{313--324}).
+%Type = Inproceedings
+\bibitem[{Thomsen et~al.(2014)Thomsen, Yiu \& Jensen}]{thomsen2014concise}
+\bibinfo{author}{Thomsen, J.~R.}, \bibinfo{author}{Yiu, M.~L.}, \&
+  \bibinfo{author}{Jensen, C.~S.} (\bibinfo{year}{2014}).
+\newblock \bibinfo{title}{Concise caching of driving instructions}.
+\newblock In {\it \bibinfo{booktitle}{Proceedings of the 22nd ACM International
+  Conference on Advances in Geographic Information Systems}\/} (pp.
+  \bibinfo{pages}{23--32}).
+%Type = Inproceedings
+\bibitem[{Tian et~al.(2009)Tian, Lee \& Lee}]{tian2009monitoring}
+\bibinfo{author}{Tian, Y.}, \bibinfo{author}{Lee, K.~C.}, \&
+  \bibinfo{author}{Lee, W.-C.} (\bibinfo{year}{2009}).
+\newblock \bibinfo{title}{Monitoring minimum cost paths on road networks}.
+\newblock In {\it \bibinfo{booktitle}{Proceedings of the 17th ACM International
+  Conference on Advances in Geographic Information Systems}\/} (pp.
+  \bibinfo{pages}{217--226}).
+%Type = Article
+\bibitem[{Wang et~al.(2016)Wang, Davis \& Ren}]{Wang2016}
+\bibinfo{author}{Wang, Q.}, \bibinfo{author}{Davis, D.~N.}, \&
+  \bibinfo{author}{Ren, J.} (\bibinfo{year}{2016}).
+\newblock \bibinfo{title}{Mining frequent biological sequences based on bitmap
+  without candidate sequence generation}.
+\newblock {\it \bibinfo{journal}{Computers in Biology and Medicine}\/},  {\it
+  \bibinfo{volume}{69}\/}, \bibinfo{pages}{152 -- 157}.
+%Type = Inproceedings
+\bibitem[{Wei(2010)}]{wei2010tedi}
+\bibinfo{author}{Wei, F.} (\bibinfo{year}{2010}).
+\newblock \bibinfo{title}{Tedi: Efficient shortest path query answering on
+  graphs}.
+\newblock In {\it \bibinfo{booktitle}{Proceedings of the 2010 ACM Conference on
+  Management of Data}\/} (pp. \bibinfo{pages}{99--110}).
+%Type = Article
+\bibitem[{Wu et~al.(2012)Wu, Xiao, Deng, Cong, Zhu \& Zhou}]{wu2012shortest}
+\bibinfo{author}{Wu, L.}, \bibinfo{author}{Xiao, X.}, \bibinfo{author}{Deng,
+  D.}, \bibinfo{author}{Cong, G.}, \bibinfo{author}{Zhu, A.~D.}, \&
+  \bibinfo{author}{Zhou, S.} (\bibinfo{year}{2012}).
+\newblock \bibinfo{title}{Shortest path and distance queries on road networks:
+  An experimental evaluation}.
+\newblock {\it \bibinfo{journal}{Proceedings of the International Conference on
+  Very Large Data Bases}\/},  {\it \bibinfo{volume}{5 \textup{(5)}}\/},
+  \bibinfo{pages}{406--417}.
+
+\end{thebibliography}

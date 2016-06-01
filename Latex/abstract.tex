@@ -1,0 +1,6 @@
+\begin{abstract}
+The problem of caching shortest paths which aims at reducing the computational time of servers has been widely studied. All the existing methods addressing this problem assume that the graph status does not change with time. Based on this assumption, they analyze shortest paths query logs and prefer to load paths with the most query frequency into the cache. However, the graph status is actually affected by many factors and undoubtedly changes with time in the real work. For example, in a road network, the traffic is heavy in peak hours and it becomes light in non-peak hours. As the existing approaches ignore the change of graph status, they cannot guarantee the efficient use of caches. In this paper, we first exploit properties related with changing graphs. Then we develop an algorithm to detect shortest paths affected by weight change of edges. After detection affected paths in a cache, several heuristic based refreshment strategies are proposed to update the cache. In the experimental section, performances of proposed strategies are compared.
+
+
+\textbf{Keywords:} shortest path caching, weight change, affected shortest paths, cache refreshment
+\end{abstract}
