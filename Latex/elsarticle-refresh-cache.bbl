@@ -20,6 +20,7 @@
   search engines}.
 \newblock In {\it \bibinfo{booktitle}{Advances in Information Retrieval}\/}
   (pp. \bibinfo{pages}{628--636}).
+\newblock \bibinfo{publisher}{Springer}.
 %Type = Inproceedings
 \bibitem[{Baeza-Yates et~al.(2007)Baeza-Yates, Gionis, Junqueira, Murdock,
   Plachouras \& Silvestri}]{baeza2007impact}
@@ -39,6 +40,7 @@
   distribution}.
 \newblock In {\it \bibinfo{booktitle}{String Processing and Information
   Retrieval}\/} (pp. \bibinfo{pages}{56--65}).
+\newblock \bibinfo{organization}{Springer}.
 %Type = Incollection
 \bibitem[{Bauer \& Wagner(2009)}]{bauer2009batch}
 \bibinfo{author}{Bauer, R.}, \& \bibinfo{author}{Wagner, D.}
