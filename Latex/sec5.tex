@@ -1,35 +1,30 @@
 \section{Experiments }
 \label{sec:exp}
 
-The benchmark data sets used are the commonly known data sets: the road network of Aalborg\footnote{http://www.dbxr.org/experimental-guidelines/}, Beijing\footnote{http://arxiv.org/abs/cs/04100001}
-and Singapore \citep{Song2014PRESS}. All data sets consist of a large number of nodes, edges, and associated weights. Table \ref{tab:datasetinfo} summarizes the information on the data sets.
+We used three data sets Aalborg\footnote{http://www.dbxr.org/experimental-guidelines/}, Beijing\footnote{http://arxiv.org/abs/cs/04100001}, and Singapore \citep{Song2014PRESS} in our experiments. Each data set consists of a weighted road network and a query log. 
+The query log of each data set is divided into two parts; one half is the training set and the other half is the test set. Training sets act as historical logs while test sets act as future queries. The frequency statistics are extracted from the training set, and the cache is filled based on benefit values.
+Table \ref{tab:datasetinfo} summarizes the information on the data sets. Columns ``Size of training set'' and ``Size of test set'' indicate the number of queries in the training set and test set, respectively. We assume that the training set and test set have similar query distributions.
 
- \begin{table}[h]
+ \begin{table}[htbp]
  \caption{Information of data sets.}
  \centering
  \label{tab:datasetinfo}
 {
- \begin{tabular}{|c|c|c|c|}
+ \begin{tabular}{c|c|c|c|c}
  \hline
-  Data set   & Number of nodes &Number of edges & Description\\
+  Data set   & No. of nodes & No. of edges & Size of training set & Size of test set\\
   \hline
-  Aalborg    &3.9Million&4.6Million&Road network\\
+  Aalborg    & 129k         & 137k         &2372                            & 2372\\
   \hline
-   Beijing   &2.4Million&2.7Million&Road network\\
+   Beijing   & 76k          &85k           &6464                            & 6464\\
   \hline
-   Singapore & 20,800&55,890&Road network\\
+   Singapore & 20,801       &55,892        &7500                            & 7500\\
    \hline
  \end{tabular}
 }
 \end{table}
 
-We divide each data set into two parts: one part for training and the other part for testing. Training sets act as historical logs while test sets act as future queries. The frequency statistics are extracted from the training set, and the cache is filled based on benefit values.
-For Aalborg, there are 2673 and 2573 queries in training and test sets, respectively; for Beijing, there are 7177 and 6664 queries in training and test sets, respectively; for Singapore, we draw 20,000 queries from a long-tail distribution, which is close to the practical situation. Out of the 20,000 queries, 70\% queries are seen as the training set and remnant 30\% queries as the test set.
-
-%For Aalborg, there are 2373 and 2373 queries in training and test sets, respectively; for Beijing, there are 6464 and 6464 queries in training and test sets, respectively; for Singapore, we draw 15,000 trajectories from a taxi trajectory data of Singapore randomly, and then we we extract each trajectory's start point and end point, and get the nodes number corresponding to the nodes on the road network, the start node and end node will be the source and target of a shortest path request.We get 15000 queries to be the query log at last, half queries are seen as the training set and remnant 50\% queries as the test set.
-%
-To simulate the weight change of an edge, we generate 50 instances based on each data set. In each instance, one edge is randomly selected and its weight is changed. Out of the 50 instances, 20 instances increase weights of edges and 30 instances decrease weights of edges.
-The increase and decrease of weights range from 1\% to 100\%.
+We generate 50 instances based on each data set; out of the 50 instances, 25 instances increase weights of edges and 25 instances decrease weights of edges. To assure that the increased and decreased edges have a relatively high impact on the response efficiency, we firstly initialize the cache, and then summarize the highest frequency of edges appeared in the cache.
 
 
 We assume that the query trend on training sets and test sets are similar, and the statistic information from training sets can predict future queries to some extent. All the code was implemented in GNU C++. The experiments were run on a PC with an Intel i7 Quad Core CPU clocked at 3.10 GHz.

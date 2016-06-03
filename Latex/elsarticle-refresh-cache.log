@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=latex 2016.1.22)  2 JUN 2016 20:59
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=latex 2016.1.22)  3 JUN 2016 16:57
 entering extended mode
 **elsarticle-refresh-cache.tex
 (C:\Users\宁\Documents\GitHub\ESWA-minor\Latex\elsarticle-refresh-cache.tex
@@ -500,9 +500,6 @@ Overfull \hbox (10.58083pt too wide) in paragraph at lines 535--548
 
 [16] [17] [18]) (C:\Users\宁\Documents\GitHub\ESWA-minor\Latex\sec4.tex
 [19] [20] [21]) (C:\Users\宁\Documents\GitHub\ESWA-minor\Latex\sec5.tex
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 [22]
 File: figure/construct-cache-time-aal.eps Graphic file (type eps)
  <figure/construct-cache-time-aal.eps>
@@ -540,7 +537,7 @@ Overfull \hbox (2.52728pt too wide) in paragraph at lines 3--11
  a changed net-work. Changes
  []
 
-[27] [28])
+[27]) [28]
 (C:\Users\宁\Documents\GitHub\ESWA-minor\Latex\elsarticle-refresh-cache.bbl
 [29] [30] [31])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 84.
@@ -570,4 +567,4 @@ Here is how much of TeX's memory you used:
  14 hyphenation exceptions out of 8191
  37i,28n,35p,1147b,735s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on elsarticle-refresh-cache.dvi (32 pages, 212076 bytes).
+Output written on elsarticle-refresh-cache.dvi (32 pages, 211600 bytes).
