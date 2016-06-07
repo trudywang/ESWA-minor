@@ -1,9 +1,9 @@
 \section{Experiments }
 \label{sec:exp}
 
-We used three data sets Aalborg\footnote{http://www.dbxr.org/experimental-guidelines/}, Beijing\footnote{http://arxiv.org/abs/cs/04100001}, and Singapore \citep{Song2014PRESS} in our experiments. Each data set consists of a weighted road network and a query log. 
+We used three data sets Aalborg\footnote{http://www.dbxr.org/experimental-guidelines/}, Beijing\footnote{http://arxiv.org/abs/cs/04100001}, and Singapore \citep{Song2014PRESS} in our experiments. Each data set consists of a weighted road network and a query log.
 The query log of each data set is divided into two parts; one half is the training set and the other half is the test set. Training sets act as historical logs while test sets act as future queries. The frequency statistics are extracted from the training set, and the cache is filled based on benefit values.
-Table \ref{tab:datasetinfo} summarizes the information on the data sets. Columns ``Size of training set'' and ``Size of test set'' indicate the number of queries in the training set and test set, respectively. We assume that the training set and test set have similar query distributions.
+Table \ref{tab:datasetinfo} summarizes the information on the data sets. Columns ``Size of training set'' and ``Size of test set'' indicate the number of queries in the training set and test set, respectively. We assume that the query trend on training sets and test sets are similar, and the statistic information from training sets can predict future queries to some extent.
 
  \begin{table}[htbp]
  \caption{Information of data sets.}
@@ -24,10 +24,16 @@ Table \ref{tab:datasetinfo} summarizes the information on the data sets. Columns
 }
 \end{table}
 
-We generate 50 instances based on each data set; out of the 50 instances, 25 instances increase weights of edges and 25 instances decrease weights of edges. To assure that the increased and decreased edges have a relatively high impact on the response efficiency, we firstly initialize the cache, and then summarize the highest frequency of edges appeared in the cache.
+We generated 50 instances based on each data set; one half of the instances increase weights of edges and the other half decrease weights. The increased and decreased edges must a relatively high impact on the response efficiency.
+To meet the criteria, we firstly generated instances with weights increased, then the decreased instances. Hereafter, we explain the process of generating instances for Aalborg. For the other data sets, the process is totally the same.
+
+The cache was initialized based on the road network and training set of Aalborg.
+For each path in the cache, two consecutive nodes of the path forms an edge. We sorted all edges formed by the cached paths based on edges' frequencies of appearance. The 25 edges with the highest frequencies were marked.
+The road network in Aalborg act as the road network before the weight of one edge is increased (original network). Each time, we selected one marked edge $e$ and increased $w_e$ by 10 times, resulting in a changed road network (new network). The 25 edges were sequentially increased and 25 corresponding instances with weights increased were obtained.
+For the instances of weights decreased, new networks of increased instances act as the original networks. When $w_e$ of marked edges recovered to their weights recorded in Aalborg, we yielded instances with decreased weights.
 
 
-We assume that the query trend on training sets and test sets are similar, and the statistic information from training sets can predict future queries to some extent. All the code was implemented in GNU C++. The experiments were run on a PC with an Intel i7 Quad Core CPU clocked at 3.10 GHz.
+All the code was implemented in GNU C++. The experiments were run on a PC with an Intel i7 Quad Core CPU clocked at 3.10 GHz.
 
 \subsection{Effect of Cache Structure}
 \label{sec:effect-cache-structure}
