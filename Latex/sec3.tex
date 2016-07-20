@@ -103,7 +103,7 @@ Since $v_j\neq v_a$, $v_j\neq v_b$, no matter what $v_{adj}$ is, $\langle v_j,v_
 Since $v_a$ and $v_b$ are symmetric, the following statement still stands: $v_i$ and $v_j$ are two nodes where $v_i\neq v_a$, $v_i\neq v_b$. Suppose at least one path of $P_{i,j}$ does not contain $e$.
 For any adjacent node $v_{adj}$ of $v_i$, if $P_{{adj},j}$ is in the form of $P_{adj,j}=\langle v_{adj},v_i,...,v_j\rangle$, $P_{adj,j}$ does not contain $e$ either.
 \subsection{Node Expansion Algorithm}
-Since it is easy to check affected shortest paths when $w_e$ increases, in the following, we pay our attention on the algorithms of detecting affected paths when $w_e$ decreases.
+Since it is easy to check affected shortest paths when $w_e$ increases, in the following, we pay our attention to the algorithms of detecting affected paths when $w_e$ decreases.
 We propose a node expansion algorithm (NEA) in this subsection.
 
 For the affected shortest path detection problem, the key problem is to decide which paths are detected. The paths that contain $e$ should be detected while the paths that do not contain $e$ are not necessary to be detected.
@@ -111,12 +111,15 @@ The graph is our problem is undirected, therefore a path from $v_i$ to $v_j$ is 
 $C_s$ ($C_t$) is used to record start nodes (termination nodes) of to-be-detected paths.
 Every time, one node $v_s$ from $C_s$ and one node $v_t$ from $C_t$ comprise a node-pair, and we detect whether its shortest path is affected. $C_s$ ($C_t$) is expanded by adding adjacent nodes of $v_s$ ($v_t$).
 
+For the general purpose of detecting affected paths, all the node-pair will be detected and the detection is time-consuming. Since our ultimate goal is to update the cache, it is not necessary to detect all node-pair. We define that the \textbf{node distance} $d(i,j)$ between $v_i$ and $v_j$ represents the minimum number of nodes among all paths from $v_i$ to $v_j$. When weights of edges in a graph become all-1, $w(i,j)$ is equal to $d(i,j)$.
+Suppose the maximum node distances of paths in the cache is $K$, we will ignore the detection of node-pairs whose node distances are longer than $K$.
+
 The pseudo code is illustrated in Algorithm~\ref{alg:calmin}.
 The endpoints of $e$ are $v_a$ and $v_b$.
 From the implementation perspective, both $C_s$ and $C_t$ are queues in a FIFO manner.
 First, $C_s$ is initialized with the only start node $v_a$.
 In the outer loop, start node $v_s$ is the first node popped from $C_s$.
-If the new shortest path $P'_{s,b}$ contains $e$ (line~\ref{algo:1conte}), then adjacent nodes of $v_s$ are appended into $C_s$ unless they have been added into $C_s$ ever before. If $P'_{s,b}$ does not contain $e$, according to Corollary~\ref{thm:node-node}, the adjacent node $v_{adj}$ of $v_s$ are not necessarily put into $C_s$ since $P'_{{adj},b}$ does not contain $e$.
+If the new shortest path $P'_{s,b}$ contains $e$ (line~\ref{algo:1conte}), then adjacent nodes of $v_s$ are appended into $C_s$ unless they have been added into $C_s$ ever before or the node distances from $v_a$ exceed $K$. If $P'_{s,b}$ does not contain $e$, according to Corollary~\ref{thm:node-node}, the adjacent node $v_{adj}$ of $v_s$ are not necessarily put into $C_s$ since $P'_{{adj},b}$ does not contain $e$.
 \begin{algorithm}[htbp]
 {\small
     \caption{NEA}
@@ -128,7 +131,7 @@ If the new shortest path $P'_{s,b}$ contains $e$ (line~\ref{algo:1conte}), then 
    \While{$C_s~is~not~empty$}{
         $ v_s \leftarrow$  pop the first element from $C_s$\;
         calculate $P'_{s,b}$\;
-        \If{ $P'_{s,b}$ contains $e$}{\label{algo:1conte}
+        \If{ $P'_{s,b}$ contains $e \&\& d'_{s,a}<K$}{\label{algo:1conte}
             \For{each adjacent node $v_{adj}$  of  $v_s$}{
                     \If{ $v_{adj}$ has not been added into $C_s$ }{
                         append $v_{adj}$ to $C_s$;
@@ -140,7 +143,7 @@ If the new shortest path $P'_{s,b}$ contains $e$ (line~\ref{algo:1conte}), then 
         {
             $ v_t \leftarrow$  pop the first element from $C_t$\;
             calculate $P'_{s,t}$\;
-            \If{ $P'_{s,t}$ contains $e$}{
+            \If{ $P'_{s,t}$ contains $e \&\& d'_{b,t}<K$}{
                 %$Found \leftarrow true$\;
                 \For{each adjacent node $v_{adj}$ of $v_t$}{
                     \If{$v_{adj}$ has not been added into $C_t$ }{
@@ -254,8 +257,7 @@ In the above subsection, we introduce a basic method NEA to compute affected sho
 The above algorithm mainly has two components: which paths are detected and how to check whether they are affected.
 In this part, we will present how to improve determining which paths are detected.
 
-For ease of illustration, we first introduce the concept of \textbf{node distance}. The node distance $d(i,j)$ between $v_i$ and $v_j$ represents the minimum number of nodes among all paths from $v_i$ to $v_j$. When weights of edges in a graph become all-1, $w(i,j)$ is equal to $d(i,j)$.
-Let $S_d(v_a)$ be the set of nodes whose node distance from $a$ is $d$.
+For ease of illustration, let $S_d(v_a)$ be the set of nodes whose node distance from $a$ is $d$.
 %If a sequence $S=\langle v_a,v_1,...,vi,..,vn\rangle$ satisfies that the $i$th element $v_i\in S_i(v_a)$, we say it is an orderly sequence since the order of elements comply with the order of node distances.
 
 \begin{corollary}

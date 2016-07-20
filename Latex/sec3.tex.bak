@@ -103,13 +103,15 @@ Since $v_j\neq v_a$, $v_j\neq v_b$, no matter what $v_{adj}$ is, $\langle v_j,v_
 Since $v_a$ and $v_b$ are symmetric, the following statement still stands: $v_i$ and $v_j$ are two nodes where $v_i\neq v_a$, $v_i\neq v_b$. Suppose at least one path of $P_{i,j}$ does not contain $e$.
 For any adjacent node $v_{adj}$ of $v_i$, if $P_{{adj},j}$ is in the form of $P_{adj,j}=\langle v_{adj},v_i,...,v_j\rangle$, $P_{adj,j}$ does not contain $e$ either.
 \subsection{Node Expansion Algorithm}
-Since it is easy to check affected shortest paths when $w_e$ increases, in the following, we pay our attention on the algorithms of detecting affected paths when $w_e$ decreases.
+Since it is easy to check affected shortest paths when $w_e$ increases, in the following, we pay our attention to the algorithms of detecting affected paths when $w_e$ decreases.
 We propose a node expansion algorithm (NEA) in this subsection.
 
 For the affected shortest path detection problem, the key problem is to decide which paths are detected. The paths that contain $e$ should be detected while the paths that do not contain $e$ are not necessary to be detected.
 The graph is our problem is undirected, therefore a path from $v_i$ to $v_j$ is just the path from $v_j$ to $v_i$. To avoid detecting a path two times, we artificially assign a direction for paths.
 $C_s$ ($C_t$) is used to record start nodes (termination nodes) of to-be-detected paths.
 Every time, one node $v_s$ from $C_s$ and one node $v_t$ from $C_t$ comprise a node-pair, and we detect whether its shortest path is affected. $C_s$ ($C_t$) is expanded by adding adjacent nodes of $v_s$ ($v_t$).
+
+For the general purpose of detecting affected paths, all the node-pair will be detected and the detection is time-consuming. Since our ultimate goal is to update the cache, it is not necessary to detect all node-pair. Suppose the maximum length of paths in the cache is $K$, we will ignore the detection of node-pairs whose shortest paths are longer than $K$.
 
 The pseudo code is illustrated in Algorithm~\ref{alg:calmin}.
 The endpoints of $e$ are $v_a$ and $v_b$.
@@ -128,7 +130,7 @@ If the new shortest path $P'_{s,b}$ contains $e$ (line~\ref{algo:1conte}), then 
    \While{$C_s~is~not~empty$}{
         $ v_s \leftarrow$  pop the first element from $C_s$\;
         calculate $P'_{s,b}$\;
-        \If{ $P'_{s,b}$ contains $e$}{\label{algo:1conte}
+        \If{ $P'_{s,b}$ contains $e$ AND the length of $P'_{s,b}$ is smaller than $K$}{\label{algo:1conte}
             \For{each adjacent node $v_{adj}$  of  $v_s$}{
                     \If{ $v_{adj}$ has not been added into $C_s$ }{
                         append $v_{adj}$ to $C_s$;
@@ -254,8 +256,7 @@ In the above subsection, we introduce a basic method NEA to compute affected sho
 The above algorithm mainly has two components: which paths are detected and how to check whether they are affected.
 In this part, we will present how to improve determining which paths are detected.
 
-For ease of illustration, we first introduce the concept of \textbf{node distance}. The node distance $d(i,j)$ between $v_i$ and $v_j$ represents the minimum number of nodes among all paths from $v_i$ to $v_j$. When weights of edges in a graph become all-1, $w(i,j)$ is equal to $d(i,j)$.
-Let $S_d(v_a)$ be the set of nodes whose node distance from $a$ is $d$.
+For ease of illustration, let $S_d(v_a)$ be the set of nodes whose node distance from $a$ is $d$.
 %If a sequence $S=\langle v_a,v_1,...,vi,..,vn\rangle$ satisfies that the $i$th element $v_i\in S_i(v_a)$, we say it is an orderly sequence since the order of elements comply with the order of node distances.
 
 \begin{corollary}
@@ -428,10 +429,7 @@ As $P_{a,b}$ is an affected shortest path, we know $P_{a,b}=S1=\langle v_a,v_m,.
 Since $P'_{s,e}$ contains $e$, the sequence of $P'_{s,e}$ must be $S3=\langle v_s,...,v_a,v_b,...,v_e\rangle $. If we substitute $\langle v_a,v_b\rangle$ ($S2$) in $S3$ with $S1$, we have $S4=\langle v_s,...,v_a,v_m,...,v_n,v_b,...,v_e\rangle$. It is clearly that $w_{S4}<w_{S3}$, therefore $P_{s,e}$ can not be $S3$. The assumption does not hold; therefore our corollary stands.
 \end{proof}
 
-According to Corollary~\ref{thm:check}, the process of detecting whether a path is affected is shortened. If $P_{a,b}$ is an affected shortest path,
-\modify{
-we can avoid the calculation of $P_{s,e}$ in line~\ref{algo:2calPse} and comparison with $P'_{a,b}$ in line~\ref{algo:2unequal} of Algorithm~\ref{alg:candpath}, since $P'_{s,e}$ contains $e$ (line~\ref{algo:2conte} of Algorithm~\ref{alg:candpath}), so we can know $P_{s,e}$ is an affected path directly.
-}
+According to Corollary~\ref{thm:check}, the process of detecting whether a path is affected is shortened. If $P_{a,b}$ is an affected shortest path, we can avoid the calculation of $P_{s,e}$ in line~\ref{algo:2calPse} and comparison with $P'_{a,b}$ in line~\ref{algo:2unequal} of Algorithm~\ref{alg:candpath}, since $P'_{s,e}$ contains $e$ (line~\ref{algo:2conte} of Algorithm~\ref{alg:candpath}), so we can know $P_{s,e}$ is an affected path directly.
 
 We have another optimized algorithm inward node expansion algorithm (INE). The term ``inward'' is because nodes of $C_t$ are visited from ones far way to $v_b$.
 Since the main logic of INE is the same with ONE, we only demonstrate the different lines. INE is to replace line~\ref{algo:2forvt}-\ref{algo:2end} of ONE with the code in Algorithm~\ref{alg:candpathplus}.
@@ -531,13 +529,13 @@ Take Figure~\ref{fig:decrease_example} as an example, the iteration process by I
 \fi
 
 Now we compare the performance of three algorithms. The nodes visited by the three proposed algorithms are displayed in Table~\ref{tab:algocomp}.
-The numbers of nodes visited are NEA$>$ONE$>$INE, and the number of iterations for the three methods are still NEA$>$ONE$>$INE.
+The numbers of nodes visited are NEA$>$ONE$>$INE, and the numbers of iterations for the three methods are still NEA$>$ONE$>$INE.
 \begin{table}[htbp]
 	\centering
 	\caption{Performance comparison of algorithms.}
 	\begin{tabular}{|l|l|l|l|l|}
     \hline
-     & $v_s$ & $C_t$(NEA) & $C_t$(ONE) & $C_t$(INE)  \\
+     & $v_s$ & $C_t$ (NEA) & $C_t$ (ONE) & $C_t$ (INE)  \\
     \hline
     $1$ & $v3$   & $\{v2,v4,v5,v6,v7,v8\}$	  & $\{v2,v4,v5,v6,v7,v8\}$	& $\{v2,v4,v5,v6,v7,v8\}$	 \\
     $2$ & $v1$   & $\{v6\}$	 &  $\{v6\}$	&  $\{v6\}$ \\
