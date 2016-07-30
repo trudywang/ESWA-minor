@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=latex 2016.1.22)  19 JUL 2016 12:07
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=latex 2016.1.22)  30 JUL 2016 17:12
 entering extended mode
 **elsarticle-refresh-cache.tex
 (C:\Users\宁\Documents\GitHub\ESWA-minor\Latex\elsarticle-refresh-cache.tex
@@ -340,9 +340,57 @@ slashbox style by K.Yasuoka, May 1993.
 ) (C:\CTEX\MiKTeX\tex\latex\multirow\multirow.sty
 \bigstrutjot=\dimen132
 )
+(C:\CTEX\MiKTeX\tex\latex\tools\multicol.sty
+Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
+\c@tracingmulticols=\count130
+\mult@box=\box38
+\multicol@leftmargin=\dimen133
+\c@unbalance=\count131
+\c@collectmore=\count132
+\doublecol@number=\count133
+\multicoltolerance=\count134
+\multicolpretolerance=\count135
+\full@width=\dimen134
+\page@free=\dimen135
+\premulticols=\dimen136
+\postmulticols=\dimen137
+\multicolsep=\skip59
+\multicolbaselineskip=\skip60
+\partial@page=\box39
+\last@line=\box40
+\mult@rightbox=\box41
+\mult@grightbox=\box42
+\mult@gfirstbox=\box43
+\mult@firstbox=\box44
+\@tempa=\box45
+\@tempa=\box46
+\@tempa=\box47
+\@tempa=\box48
+\@tempa=\box49
+\@tempa=\box50
+\@tempa=\box51
+\@tempa=\box52
+\@tempa=\box53
+\@tempa=\box54
+\@tempa=\box55
+\@tempa=\box56
+\@tempa=\box57
+\@tempa=\box58
+\@tempa=\box59
+\@tempa=\box60
+\@tempa=\box61
+\c@columnbadness=\count136
+\c@finalcolumnbadness=\count137
+\last@try=\dimen138
+\multicolovershoot=\dimen139
+\multicolundershoot=\dimen140
+\mult@nat@firstbox=\box62
+\colbreak@box=\box63
+\multicol@sort@counter=\count138
+)
 (C:\CTEX\UserData\tex\latex\algorithm2e\algorithm2e.sty
 Package: algorithm2e 2013/01/06 v5.00 algorithms environments
-\c@AlgoLine=\count130
+\c@AlgoLine=\count139
 
 (C:\CTEX\MiKTeX\tex\latex\tools\xspace.sty
 Package: xspace 2009/10/20 v1.13 Space after command names (DPC,MH)
@@ -357,39 +405,39 @@ Package `algorithm2e' Release 5.0 -- january 06 2013 --
 subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
 - Author: Christophe Fiorio (cfiorio@um2.fr)
 ********************************************************
-\skiptotal=\skip59
-\skiplinenumber=\skip60
-\skiprule=\skip61
-\skiphlne=\skip62
-\skiptext=\skip63
-\skiplength=\skip64
-\algomargin=\skip65
-\skipalgocfslide=\skip66
-\algowidth=\dimen133
-\inoutsize=\dimen134
-\inoutindent=\dimen135
-\interspacetitleruled=\dimen136
-\interspacealgoruled=\dimen137
-\interspacetitleboxruled=\dimen138
-\algocf@inoutbox=\box38
-\algocf@inputbox=\box39
-\AlCapSkip=\skip67
-\AlCapHSkip=\skip68
-\algoskipindent=\skip69
-\algocf@nlbox=\box40
-\algocf@hangingbox=\box41
-\algocf@untilbox=\box42
-\algocf@skipuntil=\skip70
-\algocf@capbox=\box43
-\algoheightruledefault=\skip71
-\algoheightrule=\skip72
-\algotitleheightruledefault=\skip73
-\algotitleheightrule=\skip74
-\c@algocfline=\count131
-\c@algocfproc=\count132
-\c@algocf=\count133
-\algocf@algoframe=\box44
-\algocf@algobox=\box45
+\skiptotal=\skip61
+\skiplinenumber=\skip62
+\skiprule=\skip63
+\skiphlne=\skip64
+\skiptext=\skip65
+\skiplength=\skip66
+\algomargin=\skip67
+\skipalgocfslide=\skip68
+\algowidth=\dimen141
+\inoutsize=\dimen142
+\inoutindent=\dimen143
+\interspacetitleruled=\dimen144
+\interspacealgoruled=\dimen145
+\interspacetitleboxruled=\dimen146
+\algocf@inoutbox=\box64
+\algocf@inputbox=\box65
+\AlCapSkip=\skip69
+\AlCapHSkip=\skip70
+\algoskipindent=\skip71
+\algocf@nlbox=\box66
+\algocf@hangingbox=\box67
+\algocf@untilbox=\box68
+\algocf@skipuntil=\skip72
+\algocf@capbox=\box69
+\algoheightruledefault=\skip73
+\algoheightrule=\skip74
+\algotitleheightruledefault=\skip75
+\algotitleheightrule=\skip76
+\c@algocfline=\count140
+\c@algocfproc=\count141
+\c@algocf=\count142
+\algocf@algoframe=\box70
+\algocf@algobox=\box71
 ) (C:\CTEX\MiKTeX\tex\latex\graphics\color.sty
 Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
 
@@ -401,10 +449,10 @@ Package color Info: Driver file: dvips.def on input line 130.
 (C:\CTEX\MiKTeX\tex\latex\graphics\dvipsnam.def
 File: dvipsnam.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
 ))
-\c@definition=\count134
-\c@lemma=\count135
-\c@corollary=\count136
-\c@proof=\count137
+\c@definition=\count143
+\c@lemma=\count144
+\c@corollary=\count145
+\c@proof=\count146
 
 (C:\Users\宁\Documents\GitHub\ESWA-minor\Latex\elsarticle-refresh-cache.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
@@ -426,7 +474,7 @@ LaTeX Font Info:    Try loading font information for OT1+ptm on input line 31.
 (C:\CTEX\MiKTeX\tex\latex\psnfss\ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
-\AtBeginShipoutBox=\box46
+\AtBeginShipoutBox=\box72
 Package hyperref Info: Link coloring OFF on input line 31.
 
 (C:\CTEX\MiKTeX\tex\latex\hyperref\nameref.sty
@@ -435,7 +483,7 @@ Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
 (C:\CTEX\MiKTeX\tex\generic\oberdiek\gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count138
+\c@section@level=\count147
 )
 LaTeX Info: Redefining \ref on input line 31.
 LaTeX Info: Redefining \pageref on input line 31.
@@ -481,24 +529,21 @@ File: figure/Path_array.eps Graphic file (type eps)
 File: figure/bitmap.eps Graphic file (type eps)
  <figure/bitmap.eps> [7] [8] [9]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 127.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 143.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 130.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 146.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6.25002> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 130.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 146.
+ [10] [11]
 File: figure/decrease.eps Graphic file (type eps)
- <figure/decrease.eps>
-[10] [11] [12]
 
-LaTeX Warning: Float too large for page by 103.34674pt on input line 335.
-
-[13] [14] [15] [16] [17]
-Overfull \hbox (10.58083pt too wide) in paragraph at lines 537--550
+<figure/decrease.eps> [12] [13] [14] [15] [16] [17] [18] [19]
+Overfull \hbox (10.58083pt too wide) in paragraph at lines 594--607
  [][][] 
  []
 
-[18]) (C:\Users\宁\Documents\GitHub\ESWA-minor\Latex\sec4.tex [19] [20]
-[21]) (C:\Users\宁\Documents\GitHub\ESWA-minor\Latex\sec5.tex [22]
+) (C:\Users\宁\Documents\GitHub\ESWA-minor\Latex\sec4.tex [20] [21] [22]
+[23]) (C:\Users\宁\Documents\GitHub\ESWA-minor\Latex\sec5.tex [24]
 File: figure/construct-cache-time-aal.eps Graphic file (type eps)
 
 <figure/construct-cache-time-aal.eps>
@@ -507,7 +552,7 @@ File: figure/construct-cache-time-beijing.eps Graphic file (type eps)
 <figure/construct-cache-time-beijing.eps>
 File: figure/construct-cache-time-singapore.eps Graphic file (type eps)
 
-<figure/construct-cache-time-singapore.eps> [23] [24]
+<figure/construct-cache-time-singapore.eps> [25]
 File: figure/A-size-time.eps Graphic file (type eps)
  <figure/A-size-time.eps>
 File: figure/A-size-time-beijing.eps Graphic file (type eps)
@@ -515,14 +560,14 @@ File: figure/A-size-time-beijing.eps Graphic file (type eps)
 <figure/A-size-time-beijing.eps>
 File: figure/singapore-detectaffect-time.eps Graphic file (type eps)
  <figure/singapore-detectaffect-time.eps>
+[26]
 File: figure/aalborgHitVsCacheSize.eps Graphic file (type eps)
-
-<figure/aalborgHitVsCacheSize.eps>
+ <figure/aalborgHitVsCacheSize.eps>
 File: figure/beijingHitVsCacheSize.eps Graphic file (type eps)
  <figure/beijingHitVsCacheSize.eps>
 File: figure/singaporeHitVsCacheSize.eps Graphic file (type eps)
 
-<figure/singaporeHitVsCacheSize.eps> [25]
+<figure/singaporeHitVsCacheSize.eps>
 File: figure/A-size-method-time.eps Graphic file (type eps)
  <figure/A-size-method-time.eps>
 File: figure/A-size-method-time-beijing.eps Graphic file (type eps)
@@ -530,17 +575,17 @@ File: figure/A-size-method-time-beijing.eps Graphic file (type eps)
 <figure/A-size-method-time-beijing.eps>
 File: figure/SinggporeCache-size-time.eps Graphic file (type eps)
  <figure/SinggporeCache-size-time.eps>
-[26]) (C:\Users\宁\Documents\GitHub\ESWA-minor\Latex\sec6.tex
+[27]) (C:\Users\宁\Documents\GitHub\ESWA-minor\Latex\sec6.tex
 Overfull \hbox (2.52728pt too wide) in paragraph at lines 3--11
 [][]\OT1/ptm/m/n/10 We ad-dress the prob-lem of re-fresh-ing cache con-tents in
  a changed net-work. Changes
  []
 
-[27] [28])
+[28] [29])
 (C:\Users\宁\Documents\GitHub\ESWA-minor\Latex\elsarticle-refresh-cache.bbl
-[29] [30] [31])
+[30] [31] [32] [33])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 84.
- [32]
+ [34]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 84.
 
 (C:\Users\宁\Documents\GitHub\ESWA-minor\Latex\elsarticle-refresh-cache.aux)
@@ -554,16 +599,16 @@ Package rerunfilecheck Warning: File `elsarticle-refresh-cache.out' has changed
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `elsarticle-refresh-cache.out':
-(rerunfilecheck)             Before: 46C9EB1C6ACDCE0483EDE6AC847D9C6F;5860
-(rerunfilecheck)             After:  22B8C01E97C89BF493CEB4819F0EF919;1555.
+(rerunfilecheck)             Before: B63553396E6B483148B360FAC07BDAF6;6180
+(rerunfilecheck)             After:  8EAF0667C7EF064F2DBC6A6BB11FB5C9;1595.
  ) 
 Here is how much of TeX's memory you used:
- 8317 strings out of 495355
- 117628 string characters out of 3183882
- 246278 words of memory out of 3000000
- 11341 multiletter control sequences out of 15000+200000
+ 8410 strings out of 495355
+ 118994 string characters out of 3183882
+ 255562 words of memory out of 3000000
+ 11431 multiletter control sequences out of 15000+200000
  21487 words of font info for 64 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 37i,28n,35p,1147b,733s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 39i,31n,35p,1147b,779s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on elsarticle-refresh-cache.dvi (32 pages, 214020 bytes).
+Output written on elsarticle-refresh-cache.dvi (34 pages, 221396 bytes).

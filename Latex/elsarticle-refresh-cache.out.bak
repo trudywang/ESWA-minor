@@ -11,9 +11,9 @@
 \BOOKMARK [2][-]{subsection.4.3}{Inward Node Expansion Algorithm}{section.4}% 11
 \BOOKMARK [1][-]{section.5}{Refreshment Strategies}{}% 12
 \BOOKMARK [2][-]{subsection.5.1}{Reload Whole Cache}{section.5}% 13
-\BOOKMARK [2][-]{subsection.5.2}{Update Affected Shortest Paths}{section.5}% 14
-\BOOKMARK [2][-]{subsection.5.3}{Replace Affected Paths with Highest Frequency Paths}{section.5}% 15
-\BOOKMARK [2][-]{subsection.5.4}{Replace Affected Paths Using Roulette Wheel Selection}{section.5}% 16
+\BOOKMARK [2][-]{subsection.5.2}{Replace Affected Shortest Paths with Largest Benefit}{section.5}% 14
+\BOOKMARK [2][-]{subsection.5.3}{Replace Affected Shortest Paths with Highest Frequency Paths}{section.5}% 15
+\BOOKMARK [2][-]{subsection.5.4}{Replace Affected Shortest Paths Using Roulette Wheel Selection}{section.5}% 16
 \BOOKMARK [1][-]{section.6}{Experiments }{}% 17
 \BOOKMARK [2][-]{subsection.6.1}{Effect of Cache Structure}{section.6}% 18
 \BOOKMARK [2][-]{subsection.6.2}{Efficiency of Detecting Affected Paths in the Cache}{section.6}% 19

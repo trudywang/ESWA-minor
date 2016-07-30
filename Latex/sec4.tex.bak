@@ -5,10 +5,11 @@ In this section, we introduce four heuristic-based cache refreshment strategies.
 
 \subsection{Reload Whole Cache}
 
-The first refreshment strategy is to empty the whole cache and reload it based on benefit values. The strategy is abbreviated as RWC.
+Reloading the whole cache strategy (RWC) is to empty the whole cache and reload it based on benefit values. When computing new benefit values, the new shortest paths of queries in the query log are calculated.
 This is the most straightforward idea to refresh the cache.
-The benefit value is proposed in \cite{Li2014refreshment}. To make this paper self-contained, we briefly introduce how the benefit oriented model works.
+The strategy can be used in both cases where $w_e$ increases and decreases.
 
+Benefit values are proposed in \cite{Li2014refreshment}. To make this paper self-contained, we briefly introduce how the benefit oriented model works.
 All of us know that the cache utilization, or the cost reduction by using cache, is affected by the query frequency and the computational time of shortest paths. When calculating the cost saved by loading a path $P_{i,j}$ into a cache, we consider: 1) which queries can be answered by $P_{i,j}$ ; and 2) the saved computational cost if answering a query $Q_{i,j}$ by a cache directly.
 
 For the first consideration, we know that a path can answer all the queries on its subpaths~\citep{cormen2001introduction}.
@@ -19,28 +20,36 @@ From the above analysis, the utilization of storing $P_{i,j}$ into a cache is:
 B(P_{i,j},\Psi)= \frac{\sum_{P_{s,t} \in S(P_{i,j})\& P_{s,t}\notin S(\Psi)} {F_{s,t}}\cdot C_{s,t}}{|P_{i,j}|}.
 \end{equation}
 
-Here, $S(P_{i,j})$ is the set of subpaths of $P_{i,j}$, and the numerator is the total cost reduction saved by caching path $P_{i,j}$. After normalized by the size of $P_{i,j}$, $B(P_{i,j})$ is the unit-size benefit brought by loading $P_{i,j}$ into a cache.
+Here, $S(P_{i,j})$ is the set of subpaths of $P_{i,j}$ and $S(\Psi)$ is the set of subpaths of paths in $\Psi$.
+When the cache is placed at the server, the time of computing shortest paths mainly lies on the round-trip communication time, which is the same for all queries \citep{thomsen2012effective}.
+The numerator as a whole is the total cost reduced by caching path $P_{i,j}$. After normalized by the size of $P_{i,j}$, $B(P_{i,j})$ is the unit-size benefit brought by loading $P_{i,j}$ into a cache.
 Readers can understand this as the value of per unit weight in a knapsack problem. Paths with larger $B(P_{i,j})$ have higher priority to be loaded into a cache.
 
-Suppose the number of nodes in graph $G$ is $N$, the size of query log is $|L|$, the number of paths in the path array is $m$, the number of node vector in the bitmap is $n$. For the RWC, all shortest paths queried in the query log are computed. The time complexity is $\mathcal O(|L|*N^2)$. The benefit values of shortest paths are computed and sorted. The complexity of such actions are $\mathcal O(|L|\log |L|)$. The time complexity of constructing path array and bitmap is $\mathcal O(m+n)$. The time complexity of this algorithm is $\mathcal O(|L|*N^2+|L|\log |L|+m+n)$.
+
+%Suppose the number of nodes in graph $G$ is $N$, the size of query log is $|L|$, the number of paths in the path array is $m$, the number of node vector in the bitmap is $n$. For the RWC, all shortest paths queried in the query log are computed. The time complexity is $\mathcal O(|L|*N^2)$. The benefit values of shortest paths are computed and sorted. The complexity of such actions are $\mathcal O(|L|\log |L|)$. The time complexity of constructing path array and bitmap is $\mathcal O(m+n)$. The time complexity of this algorithm is $\mathcal O(|L|*N^2+|L|\log |L|+m+n)$.
 
 
-\subsection{Update Affected Shortest Paths}
+\subsection{Replace Affected Shortest Paths with Largest Benefit}
 
-The first method wastes a lot of time. Since only an edge changes its weight, its impact on the whole network is limited. The majority of shortest paths do not change at all. As a result, reloading the whole cache is redundant. To overcome the shortcoming of the first method, we update all the affected paths in the cache.
-If the size of affected paths exceed the available space of the cache, shortest paths with the largest benefit values are loaded into the cache.
-
-Suppose the number of nodes in graph $G$ is $N$, the size of query log is $|L|$, the number of paths in the path array is $m$, the number of node vector in the bitmap is $n$.
-The time complexity of affected shortest paths detection is $\mathcal O(N^2)$. In the worst case, all paths in the cache are updated. Therefore, the time complexity of updating affected shortest paths is $\mathcal O(m*N^2)$. The time complexity of sorting benefit values of affected shortest paths is $\mathcal O(m\log m)$. The complexity of UASP
-\subsection{Replace Affected Paths with Highest Frequency Paths}
-
-The above method need update benefit values of affected paths.
-In the third method, after we delete the affected paths we fill the cache with paths which have the highest query frequencies. Query frequencies, instead, can be easily obtained from the query log and never change even though the network changes. It avoids computing the benefit of each path but it takes time to sort frequencies.
+RWC wastes a lot of time. Since only an edge changes its weight, its impact on the whole network is limited. The majority of shortest paths do not change at all. As a result, reloading the whole cache is redundant. In the second strategy, we detect and update the new path information of affected paths in the cache and query log. The affected paths in the cache are removed from the cache.
+In the following, the benefit values of new paths are calculated and we try to add these paths into the cache one by one.
 
 
-\subsection{Replace Affected Paths Using Roulette Wheel Selection}
+We call the second strategy RLB. In the process of detecting affected shortest paths, the new shortest path information is computed.
+%Suppose the number of nodes in graph $G$ is $N$, the size of query log is $|L|$, the number of paths in the path array is $m$, the number of node vector in the bitmap is $n$.
+%The time complexity of affected shortest paths detection is $\mathcal O(N^2)$. In the worst case, all paths in the cache are updated. Therefore, the time complexity of updating affected shortest paths is $\mathcal O(m*N^2)$. The time complexity of sorting benefit values of affected shortest paths is $\mathcal O(m\log m)$.
+\subsection{Replace Affected Shortest Paths with Highest Frequency Paths}
 
-At last, the fourth strategy is to delete all the affected paths in the cache and load new paths to the cache by the method of \emph{roulette wheel}. As the historical queries are not the true queries in the future, on one hand, we consider it as a reference for the future queries; on the other hand, we avoid over fitting the cache content to it.
+RLB strategy need update benefit values of affected paths.
+In the third method, we detect the affected paths in the cache and query log and then update new information. The cache is filled with paths of highest query frequencies.
+The strategy is named RHF.
+Query frequencies, can be easily obtained from the query log and never change even though the network changes. It avoids computing the benefit of each path.
+
+
+\subsection{Replace Affected Shortest Paths Using Roulette Wheel Selection}
+
+At last, the fourth strategy is to delete all the affected paths in the cache and load new paths to the cache by the method of \emph{roulette wheel} (RRWS).
+As the historical queries are not the true queries in the future, on one hand, we consider it as a reference for the future queries; on the other hand, we avoid over fitting the cache content to it.
 
 We use a roulette wheel to determine which paths should be loaded into the cache. One feature of the roulette wheel selection is that alternatives with low attractiveness can also be selected, although with a relatively low possibility. We adopt the idea of roulette wheel as follows: for a path $p$ in the query log, its probability of being selected $\Pr(p)$ is proportional to its query frequency $f_p$, as shown in Equation~\ref{eq:RWS-probalibity}.
 
@@ -112,7 +121,9 @@ $P_{7,12}$       &3          &0.15         &$[0.85,1.0]$\\
 %\section{Cache Structure}
 %\label{sec:structure}
 
-\textbf{Discussion}. In terms of the computational time, reloading the whole cache apparently costs the most time. Replacing affected paths with the highest frequency costs the second since it takes time to sort the frequencies of all shortest paths. Replacing affected paths using roulette wheel selection ranks the third, since it has a process of roulette wheel selection. Replacing affected paths using the largest benefit values costs the least time since only a small set of affected paths update their benefit values.
+\textbf{Discussion}. In terms of the computational time, reloading the whole cache apparently costs the most time. The shortest paths of all queries in the query log will be computed and the benefit values are calculated and sorted.
+RLB, RHF and RRWS only detect and update affected shortest paths. The unaffected paths in the cache do not need to be reloaded.
+RHF costs time in sorting frequencies of all shortest paths. RRWS has a process of roulette wheel selection. RLB will cost the least time if the benefit values are recorded in the initialization of cache, since only a small set of affected paths update their benefit values.
 
 
 

@@ -32,6 +32,7 @@
 \newblock In {\it \bibinfo{booktitle}{Proceedings of the 30th Annual
   International Conference on Research on Development in Information
   Retrieval}\/} (pp. \bibinfo{pages}{183--190}).
+\newblock \bibinfo{organization}{ACM}.
 %Type = Inproceedings
 \bibitem[{Baeza-Yates \& Saint-Jean(2003)}]{baeza2003three}
 \bibinfo{author}{Baeza-Yates, R.}, \& \bibinfo{author}{Saint-Jean, F.}
@@ -84,6 +85,7 @@
   batches of updates}.
 \newblock In {\it \bibinfo{booktitle}{Structural Information and Communication
   Complexity}\/} (pp. \bibinfo{pages}{286--297}).
+\newblock \bibinfo{publisher}{Springer}.
 %Type = Article
 \bibitem[{D'Angelo et~al.(2014)D'Angelo, D'Emidio \& Frigioni}]{d2014fully}
 \bibinfo{author}{D'Angelo, G.}, \bibinfo{author}{D'Emidio, M.}, \&
@@ -100,6 +102,7 @@
 \newblock In {\it \bibinfo{booktitle}{Proceedings of the 11th international
   conference on Extending database technology: Advances in database
   technology}\/} (pp. \bibinfo{pages}{205--216}).
+\newblock \bibinfo{organization}{ACM}.
 %Type = Article
 \bibitem[{Frigioni et~al.(1996)Frigioni, Marchetti-Spaccamela \&
   Nanni}]{frigioni1996fully}
@@ -136,6 +139,7 @@
 \newblock In {\it \bibinfo{booktitle}{Proceedings of the 22nd IEEE
   International Conference on Data Engineering}\/} (pp.
   \bibinfo{pages}{10--10}).
+\newblock \bibinfo{organization}{IEEE}.
 %Type = Incollection
 \bibitem[{Kriegel et~al.(2008)Kriegel, Kroger, Renz \&
   Schmidt}]{Kriegel2008Hierarchical}
@@ -146,6 +150,7 @@
   processing in very large traffic networks}.
 \newblock In {\it \bibinfo{booktitle}{Scientific and Statistical Database
   Management Conference}\/} (pp. \bibinfo{pages}{150--167}).
+\newblock \bibinfo{publisher}{SSDBM}.
 %Type = Article
 \bibitem[{Lauther(2004)}]{lauther2004extremely}
 \bibinfo{author}{Lauther, U.} (\bibinfo{year}{2004}).
@@ -162,6 +167,7 @@
   networks}.
 \newblock In {\it \bibinfo{booktitle}{Advances in Spatial and Temporal
   Databases}\/} (pp. \bibinfo{pages}{20--37}).
+\newblock \bibinfo{publisher}{Springer}.
 %Type = Inproceedings
 \bibitem[{Li et~al.(2014)Li, Qiu, Yang, Wang \& Yu}]{Li2014refreshment}
 \bibinfo{author}{Li, X.}, \bibinfo{author}{Qiu, T.}, \bibinfo{author}{Yang,
@@ -171,6 +177,7 @@
   problem with changing edge weight}.
 \newblock In {\it \bibinfo{booktitle}{Asia Pacific Web Conference}\/} (pp.
   \bibinfo{pages}{331--342}).
+\newblock \bibinfo{organization}{Apweb}.
 %Type = Incollection
 \bibitem[{Li et~al.(2013)Li, Wang, Yang, Wang \& Yu}]{li2013}
 \bibinfo{author}{Li, X.}, \bibinfo{author}{Wang, S.}, \bibinfo{author}{Yang,
@@ -180,6 +187,7 @@
   shortest path caches}.
 \newblock In {\it \bibinfo{booktitle}{Web Information System and
   Application}\/} (pp. \bibinfo{pages}{419--424}).
+\newblock \bibinfo{publisher}{IEEE}.
 %Type = Incollection
 \bibitem[{Liu \& Yang(2011)}]{liu2011generalization}
 \bibinfo{author}{Liu, X.}, \& \bibinfo{author}{Yang, X.}
@@ -188,6 +196,7 @@
   weighted social network graphs}.
 \newblock In {\it \bibinfo{booktitle}{Web-Age Information Management}\/} (pp.
   \bibinfo{pages}{118--130}).
+\newblock \bibinfo{publisher}{Springer}.
 %Type = Inproceedings
 \bibitem[{Long \& Suel(2005)}]{Long2005Three-Level}
 \bibinfo{author}{Long, X.}, \& \bibinfo{author}{Suel, T.}
@@ -196,6 +205,7 @@
   large web search engines}.
 \newblock In {\it \bibinfo{booktitle}{World Wide Web Conference}\/} (pp.
   \bibinfo{pages}{257--266}).
+\newblock \bibinfo{organization}{WWW}.
 %Type = Article
 \bibitem[{Markatos(2001)}]{markatos2001caching}
 \bibinfo{author}{Markatos, E.~P.} (\bibinfo{year}{2001}).
@@ -243,6 +253,7 @@
 \newblock In {\it \bibinfo{booktitle}{Proceedings of the 18th ACM International
   Conference on Information and Knowledge Management}\/} (pp.
   \bibinfo{pages}{867--876}).
+\newblock \bibinfo{organization}{CIKM}.
 %Type = Article
 \bibitem[{Song et~al.(2014)Song, Sun, Zheng \& Zheng}]{Song2014PRESS}
 \bibinfo{author}{Song, R.}, \bibinfo{author}{Sun, W.}, \bibinfo{author}{Zheng,
@@ -259,6 +270,7 @@
   location-based services}.
 \newblock In {\it \bibinfo{booktitle}{Proceedings of the 2012 ACM Conference on
   Management of Data}\/} (pp. \bibinfo{pages}{313--324}).
+\newblock \bibinfo{organization}{ACM}.
 %Type = Inproceedings
 \bibitem[{Thomsen et~al.(2014)Thomsen, Yiu \& Jensen}]{thomsen2014concise}
 \bibinfo{author}{Thomsen, J.~R.}, \bibinfo{author}{Yiu, M.~L.}, \&
@@ -267,6 +279,7 @@
 \newblock In {\it \bibinfo{booktitle}{Proceedings of the 22nd ACM International
   Conference on Advances in Geographic Information Systems}\/} (pp.
   \bibinfo{pages}{23--32}).
+\newblock \bibinfo{organization}{ACM}.
 %Type = Inproceedings
 \bibitem[{Tian et~al.(2009)Tian, Lee \& Lee}]{tian2009monitoring}
 \bibinfo{author}{Tian, Y.}, \bibinfo{author}{Lee, K.~C.}, \&
@@ -275,6 +288,7 @@
 \newblock In {\it \bibinfo{booktitle}{Proceedings of the 17th ACM International
   Conference on Advances in Geographic Information Systems}\/} (pp.
   \bibinfo{pages}{217--226}).
+\newblock \bibinfo{organization}{ACM}.
 %Type = Article
 \bibitem[{Wang et~al.(2016)Wang, Davis \& Ren}]{Wang2016}
 \bibinfo{author}{Wang, Q.}, \bibinfo{author}{Davis, D.~N.}, \&
@@ -290,6 +304,7 @@
   graphs}.
 \newblock In {\it \bibinfo{booktitle}{Proceedings of the 2010 ACM Conference on
   Management of Data}\/} (pp. \bibinfo{pages}{99--110}).
+\newblock \bibinfo{organization}{ACM}.
 %Type = Article
 \bibitem[{Wu et~al.(2012)Wu, Xiao, Deng, Cong, Zhu \& Zhou}]{wu2012shortest}
 \bibinfo{author}{Wu, L.}, \bibinfo{author}{Xiao, X.}, \bibinfo{author}{Deng,

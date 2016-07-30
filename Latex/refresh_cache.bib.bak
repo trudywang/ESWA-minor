@@ -23,7 +23,7 @@ author = "Waleed Ali Ahmed and Siti Mariyam Shamsuddin",
   booktitle={String Processing and Information Retrieval},
   pages={56--65},
   year={2003},
- % organization={Springer}
+  organization={Springer}
 }
 
 @inproceedings{baeza2007impact,
@@ -43,7 +43,6 @@ author = "Waleed Ali Ahmed and Siti Mariyam Shamsuddin",
   booktitle={Experimental Algorithms},
   pages={51--62},
   year={2009},
-%  publisher={Springer}
 }
 
 
@@ -63,7 +62,6 @@ author = "Waleed Ali Ahmed and Siti Mariyam Shamsuddin",
   booktitle={Proceedings of the 2012  ACM Conference on Management of Data},
   pages={457--468},
   year={2012},
-%  organization={ACM}
 }
 
 @book{cormen2001introduction,

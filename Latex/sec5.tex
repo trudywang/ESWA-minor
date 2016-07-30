@@ -18,7 +18,7 @@ Table \ref{tab:datasetinfo} summarizes the information on the data sets. Columns
   \hline
    Beijing   & 76k          &85k           &6464                            & 6464\\
   \hline
-   Singapore & 20,801       &55,892        &7500                            & 7500\\
+   Singapore & 20,801       &55,892        &15000                           & 15000\\
    \hline
  \end{tabular}
 }
@@ -63,7 +63,7 @@ Moreover, the response time is almost constant with the increase of cache size f
 Detecting affected paths in a cache is an important step before refreshing a cache. To demonstrate the performance of our algorithms, a naive method (NM) is used as a benchmark method. Due to the size of graph, NM only re-computes new shortest paths for all pairs of nodes in the cache and compares them with the original ones. If the two shortest paths for a pair of nodes are different, then an affected path is detected.
 We test our three affected paths detecting algorithms NEA, ONE, INE and NM on Aalborg, Beijing and Singapore data sets and the detection time of the four detection methods is regarded as the performance indicator.
 
-The experimental result on each data set is the average of 50 instances.
+The experimental result on each data set is the average of 25 instances where $w_e$ decreases.
 As seen from Figure~\ref{fig:comparison-detecttime}, all of our algorithms have a better performance than NM.
 For example, in the Aalborg data set, when the cache size is 9MB, the algorithm INE achieves the best time performance and its detection time is only 131ms, while NM costs 28.67s. Meanwhile, we observe that INE is slightly superior to ONE and ONE is superior to NEA. This is consistent with our expectation.
 \begin{figure}[htbp]
@@ -84,14 +84,14 @@ For example, in the Aalborg data set, when the cache size is 9MB, the algorithm 
 
 \subsection{Performance of Refreshment Strategies}
 \label{ssec:overhead-strategy}
-For ease of illustration, reloading the whole cache, replacing affected paths with the largest benefit values, replacing affected paths with the highest frequency paths and replacing affected paths using roulette wheel selection are abbreviated as RWC, RLB, RHF and RRWS, respectively.
 
 Figure~\ref{fig:comparison-hit} shows the hit-ratios of four refreshment strategies under different scales of caches.
 We sum up hit ratio of 50 instances for ease of read, since the differences among strategies are tiny.
 We can observe that RWC and RLB achieve the highest hit ratio. The reason is that even though RWC and RLB are based on different logics to update caches, the paths which are loaded into the cache are actually the same.
-The hit ratios of RHF and RRWS are similar and a little bit worse than the former two. This result is consistent with the logics of methods, since RHF and RRWS are not fully based on large benefit values. \modify{
+The hit ratios of RHF and RRWS are similar and a little bit worse than the former two. This result is consistent with the logics of methods, since RHF and RRWS are not fully based on large benefit values.
 From the perspective of cache size, when the cache size increases, the cache will hold more paths. The cache will answer more queries, subsequently, the hit ratio increases.
-}
+
+
 \begin{figure}[htbp]
 \centering
    \subfigure[{\footnotesize Aalborg}]
