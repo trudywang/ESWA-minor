@@ -1,26 +1,27 @@
 \section{Introduction}
 Shortest path query systems are now widely seen in our daily life \citep{wu2012shortest,potamias2009fast,wei2010tedi,liu2011generalization,
 cheng2012efficient}.
-People who use Google or Baidu map usually request shortest paths to restaurants, parking lots, cinemas, playgrounds, shopping malls and so on.
-When a user has a shortest path query, a cache in a local server is accessed; the result, if exists, will be directly returned to the user. If the cache does not have an off-the-shelf result to the query, the system accesses a global server which runs a shortest path algorithm for the result. The latter situation undoubtedly costs communication and computational time \citep{altingovde2009cost,baeza2007impact,Kriegel2008Hierarchical,gan2009improved,markatos2001caching}. The contents in caches are, therefore, very critical for the efficiency of the whole query system.
+People use map service for shortest paths to restaurants, parking lots, cinemas, playgrounds, shopping malls and so on.
+With the uberisation, drivers of private cars also frequently use map service for various destinations.
+When a user has a shortest path query, a cache in a local server is accessed; the result, if existing, will be directly returned to the user. If the cache does not have an off-the-shelf result to the query, the system accesses a global server which runs a shortest path algorithm for the query. The latter situation undoubtedly costs communication and computational time \citep{altingovde2009cost,baeza2007impact,Kriegel2008Hierarchical,gan2009improved,markatos2001caching}. The cached contents are, therefore, very critical for the efficiency of the whole caching system.
 
-In the shortest path caching problem, existing works all discuss the cache initialization problem which addresses how to load an empty cache when a road network and a query log is known, so that the cache works in a high-efficiency level in the future. Researchers usually select paths with the highest query frequencies into caches, or those paths that contain the most numbers of nodes~\citep{thomsen2012effective,li2013}.
-Existing works do not discuss how to refresh the cache when the road condition or queries change.
+In the shortest path caching problem, all of existing works discuss the cache initialization problem which addresses how to load an empty cache when a road network and a query log are known, so that the cache works in a high level of efficiency in the future. Researchers usually load paths with the highest query frequencies into the cache, or those paths that contain the most numbers of nodes~\citep{thomsen2012effective,li2013}.
+However, existing works do not discuss how to refresh the cache when the road condition or characteristic of queries change.
 Actually, the road condition cannot remain the same all the time; on contrast, it changes frequently.
-For example, rush hours or traffic congestion changes weights of some edges on a road network.
+For example, traffic congestion or a traffic accident affects the traffic capability of a road.
 %\modify{This kind of network is called \emph{dynamic road network}(\cite{lee2007,tian2009monitoring,d2014fully}).}
-When a road network changes, if paths in the cache are not adjusted, some paths in the cache may become invalid or the utilization of the cache decreases.
+If the cached paths are not adjusted after the condition of a road network changes, some paths in the cache may become invalid or the utilization of the cache decreases.
 %\modify{In this paper, we call this kind of invalid shortest path, caused by the cost change of network, as \emph{affected shortest path}.}
-How to maintain a cache based on changes of a road network is seldom discussed in the literature.
-Apparently, a straightforward way to refresh a cache is to empty the cache and conduct an initialization process once more. Such a method is too naive, because computing and evaluating all the shortest paths once more are time-consuming.
+How to maintain a cache after changes of a road network is seldom discussed in the literature.
+Apparently, a straightforward way to refresh a cache is to empty the cache and conduct an initialization process once more. Such a method is naive, because computing and evaluating all the shortest paths once again are time-consuming.
 
-In this paper, we discuss how to refresh a cache when the weight of a certain edge changes.
+In this paper, we discuss how to refresh a cache when the weight of one single edge changes.
 Assuming that only one edge changes its weight is reasonable.
-On one hand, studying the change of single edge is a good point to start from.
-We can draw some conclusions from the single-edge scenario and apply them to multi-edge scenario.
-On the other hand, single-edge has some applications. For example, traffic congestion may happen in main streets and these main streets are far away from each other and unrelated; the congestion in every main street can be separately viewed as a single-edge scenario.
+On one hand, studying one single edge is a good point to set about.
+Some generic conclusions can be drawn from the single-edge scenario and be applied to multi-edge scenarios.
+On the other hand, single-edge does have real applications. For example, the traffic congestion may happen in main streets and these main streets are far away from each other and unrelated; the congestion in every main street can be considered separately as a single-edge scenario.
 
-We first develop a cache structure based on a structure of bitmap to store and retrieve shortest paths. We then introduce the concept of ``affected paths" and develop algorithms to detect affected shortest paths due to the change of edge weight.
+We first develop a cache structure composed of a path array and a bitmap. We then introduce the concept of ``affected paths" and develop algorithms to detect affected shortest paths due to the change of edge weight.
 Next, we design four strategies to refresh the cache and compare their performance.
 Our work contributes to the literature in two aspects. First, to the best of our knowledge, our work is the first one to discuss the shortest path caching problem in a changing graph.
 This problem is undoubtedly more close to real applications.
@@ -53,7 +54,7 @@ In the following, we introduce concrete works in the two streams.
 }
 %\fixme{Should we use dynamic or changed to describe graph?}
 \modify{
-The shortest path of a certain node-pair may change after the weights of some edges change in a graph. 
+The shortest path of a certain node-pair may change after the weights of some edges change in a graph.
 The affected shortest path detection problem deals with finding node-pairs whose shortest paths are affected and update new shortest paths for these node-pairs.
 Based on whether the network changes in a regular manner, it has predictable and unpredictable networks.
 }
@@ -64,12 +65,12 @@ Based on whether the network changes in a regular manner, it has predictable and
 }
 
 
-\textbf{Unpredictable Network Models} assume that the costs of graph change randomly and cannot be depicted by a statistical distribution. Unpredictable network problem has offline and online versions. 
+\textbf{Unpredictable Network Models} assume that the costs of graph change randomly and cannot be depicted by a statistical distribution. Unpredictable network problem has offline and online versions.
 %In this paper, we refer to the offline version as pre-processing and storing additional data except the shortest path of queries\fixme{please note this sentence, and polish it}.
 
 For the offline research, it has pre-processing and needs extra space to store auxiliary information.
-In \cite{tian2009monitoring}, an index named QSI was used to identify the shortest paths affected by the change of network. 
-QSI keeps the subnetworks that are involved in derivation of answering shortest paths. 
+In \cite{tian2009monitoring}, an index named QSI was used to identify the shortest paths affected by the change of network.
+QSI keeps the subnetworks that are involved in derivation of answering shortest paths.
 In \cite{lee2007}, in order to process more than one shortest path query simultaneously, a grid-based index structure was designed to record all the affecting areas.
 Besides, arc-flags is a typical index-based approach to compute the shortest paths. It has been adopted by \cite{lauther2004extremely} for a static network. \cite{berrettini2009arc,d2014fully} studied the problem of updating arc-flags in dynamic networks.
 

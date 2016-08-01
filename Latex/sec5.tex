@@ -1,7 +1,7 @@
 \section{Experiments }
 \label{sec:exp}
 
-We used three data sets Aalborg\footnote{http://www.dbxr.org/experimental-guidelines/}, Beijing\footnote{http://arxiv.org/abs/cs/04100001}, and Singapore \citep{Song2014PRESS} in our experiments. Each data set consists of a weighted road network and a query log.
+We used three data sets Aalborg\footnote{http://www.dbxr.org/experimental-guidelines/}, Beijing\footnote{http://arxiv.org/abs/cs/04100001}, and Singapore \citep{Song2014PRESS} in our experiments. Each data set consists of a weighted road network and a query log. Since the numbers of queries in the Aalborg and Beijing query logs are relatively small, we enlarge the query logs.
 The query log of each data set is divided into two parts; one half is the training set and the other half is the test set. Training sets act as historical logs while test sets act as future queries. The frequency statistics are extracted from the training set, and the cache is filled based on benefit values.
 Table \ref{tab:datasetinfo} summarizes the information on the data sets. Columns ``Size of training set'' and ``Size of test set'' indicate the number of queries in the training set and test set, respectively. We assume that the query trend on training sets and test sets are similar, and the statistic information from training sets can predict future queries to some extent.
 
@@ -14,11 +14,11 @@ Table \ref{tab:datasetinfo} summarizes the information on the data sets. Columns
  \hline
   Data set   & No. of nodes & No. of edges & Size of training set & Size of test set\\
   \hline
-  Aalborg    & 129k         & 137k         &2372                            & 2372\\
+  Aalborg    & 129k         & 137k         &23,720                            & 23,720\\
   \hline
-   Beijing   & 76k          &85k           &6464                            & 6464\\
+   Beijing   & 76k          &85k           &64,640                            & 64,640\\
   \hline
-   Singapore & 20,801       &55,892        &15000                           & 15000\\
+   Singapore & 20,801       &55,892        &150,000                           & 150,000\\
    \hline
  \end{tabular}
 }
